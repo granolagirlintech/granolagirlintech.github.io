@@ -28,7 +28,7 @@
     color: var(--ink);
     min-height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     overflow-x: hidden;
     overflow-y: auto;
@@ -69,7 +69,7 @@
     z-index: 1;
     width: 100%;
     max-width: 420px;
-    min-height: 400px;
+    min-height: min(640px, calc(100vh - 40px));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,8 +78,10 @@
   .stage{
     display: none;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     text-align: center;
     animation: rise 0.6s ease both;
   }
@@ -262,13 +264,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6px;
+    gap: 10px;
     align-items: flex-end;
-    margin-top: 10px;
-    row-gap: 2px;
+    margin-top: 4px;
+    row-gap: 4px;
   }
   .flower{
-    width: 52px; height: 52px;
+    width: 72px; height: 72px;
     opacity: 0;
     transform: scale(0.2) translateY(10px);
     transition: opacity 0.55s ease, transform 0.55s cubic-bezier(.34,1.56,.64,1);
@@ -281,14 +283,14 @@
 
   .finale-wrap{
     position: relative;
-    margin-top: 10px;
+    margin-top: 4px;
     display: inline-block;
     cursor: pointer;
   }
   .finale{
     font-family: 'Caveat', cursive;
     font-weight: 700;
-    font-size: clamp(1.05rem, 5vw, 1.6rem);
+    font-size: clamp(1.5rem, 7.5vw, 2.2rem);
     color: var(--pink-deep);
     opacity: 0;
     white-space: nowrap;
